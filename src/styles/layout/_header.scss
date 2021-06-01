@@ -1,0 +1,227 @@
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+/*top header styles*/
+.flex-header {
+  /*end top header styles*/
+  .logo {
+    align-items: flex-start;
+  }
+}
+
+/*menu styles*/
+.navigation-menu{
+    background: rgb(220, 238, 247);
+.flex-menu {
+
+  padding: 0 33px;
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  @include flex-direction(row);
+  .menu-item {
+    &:nth-last-child(2) {
+      padding-right: 0;
+      margin-right: 0;
+      a {
+       color: #0099d2;
+       &:hover{color:rgb(255,255,255);}
+      }
+    }
+    &:first-child {
+      padding-left: 0;
+      margin-left: 0;
+    }
+  }
+
+  li {
+    a {
+      font-size: 16px;
+      color: rgba(47, 47, 47, 255);
+      font-weight: bold;
+      font-family: Montserrat, AdobeInvisFont, MyriadPro-Regular;
+      padding: 15px 3px;
+      &:active,
+      &:focus,
+      &:hover {
+        background: #0099d2;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+
+      }
+    }
+
+
+  }
+}
+
+.menu-item {
+  color: #2f2f2f;
+  padding: 15px 0;
+  margin: 0 auto;
+}
+/*right option menu -block*/
+li.options {
+  margin: auto 0;
+  padding: 0;
+  max-width: 130px;
+  width: auto;
+}
+
+ul.options {
+  margin: auto 0;
+  padding: 0;
+  max-width: 130px;
+  width: auto;
+
+  .option {
+    position: relative;
+    float: right;
+    display: flex;
+    position: relative;
+    float: right;
+    align-items: center;
+    flex-direction: column;
+
+    a {
+      font-size: 16px;
+      padding: 4px 9px;
+      @include border-radius(50px);
+      font-family: Montserrat, AdobeInvisFont, MyriadPro-Regular;
+    }
+  }
+}
+
+ul.options .font-first a {
+  font-size: 20px;
+  font-weight: 900;
+  background: #0099d2;
+  color: rgba(47, 47, 47, 255);
+}
+
+ul.options font-second a {
+  background: transparent;
+  color: rgba(255, 255, 255, 255);
+}
+
+ul.options .font-third a {
+  color: white;
+}
+}
+/*mobie navigation*/
+/*end of mobile navigation*/
+.submit::before {
+  content: "\f002";
+  display: block;
+}
+/*end menu styles*/
+/*header*/
+.flex-header {
+  padding: 27px 33px 33px 40px;
+  background: rgb(255,255,255);
+  .search {
+    form {
+      width:100%;
+      position:relative;
+      margin: auto;
+      background:rgb(240, 240, 240);
+      @include border-radius(2px);
+      input {
+        width:100%;
+        border: none;
+        background: transparent;
+        padding: 0;
+        display: inline-block;
+        height: 32px;
+        font-family: Montserrat, AdobeInvisFont, MyriadPro-Regular;
+        color: rgba(145, 145, 145, 255);
+        text-align: left;
+        float: left;
+        &::placeholder{
+          padding-left:15px;
+        }
+      }
+
+      button {
+        border: none;
+        padding: 0;
+        position:absolute;
+        right:0;
+        display: inline-block;
+        color: white;
+        float: right;
+        height: 32px;
+        width: 32px;
+        background: #0099d2;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        -ms-border-top-right-radius: 2px;
+        -o-border-bottom-right-radius: 2px;
+        -ms-border-bottom-right-radius: 2px;
+        -o-border-top-right-radius: 2px;
+      }
+    }
+  }
+}
+/*header text*/
+/*right block menu*/
+.sell {
+float: right;
+align-items: flex-end;
+position:relative;
+  ul.options {
+    float:left;
+        text-align: center;
+    margin: auto 0;
+    .option{
+    float:right;
+    margin-left:30px;
+    display:inline-block;
+    text-align: center;
+  .sell-img {
+    max-width: 48px;
+    max-height: 48px;
+    margin: auto;
+  }
+  /*resposive images*/
+  .flex-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  span.sell-link {
+    font-family: Montserrat, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 14pt;
+    color: rgba(145, 145, 145, 255);
+  }
+  sup.counter {
+    background: #0099d2;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    @include border-radius(50px);
+
+    &::before {
+      padding: 4px 6px;
+      color: #fff;
+      display: block;
+      content: "1";
+      font-size: 9px;
+      font-weight: bolder;
+    }
+  }
+}
+}
+}
+
+
+
+
+
+
+
+
+
+/*end of header*/

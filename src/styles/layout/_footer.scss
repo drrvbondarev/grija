@@ -1,0 +1,74 @@
+/*
+================================================================================
+|                                     FOOTER                                   |
+================================================================================
+*/
+.footer {
+  div{margin-top:38px}
+  &:first-child{
+    margin-top:23px;
+  }
+  h6 {
+    font-size: 14pt;
+    text-transform: uppercase;
+    font-family: $custom-font-family;
+    padding-bottom: 36px;
+    font-weight: bold;
+    color: rgba(47, 47, 47, 255);
+        padding-left: 33px;
+  }
+
+  div:nth-child(3) .footer-col li.footer-link a{
+    color: rgba(47, 47, 47, 255);
+  }
+
+  div:nth-child(4) .footer-col li.footer-link a{
+    color: rgba(145, 145, 145, 255);
+
+    &:before {
+      font-family: Font Awesome\ 5 Free;
+      content: "\f067";
+      margin-right: 1.75rem;
+      font-size: 12pt;
+      color: rgba(145, 145, 145, 255);
+    }
+  }
+
+  .logo {
+    margin: auto;
+    position: relative;
+    margin: 43px auto;
+
+    img {
+      width: 26px;
+      height: 33px;
+      margin: auto auto 18px;
+    }
+  }
+
+  .footer-text {
+    text-align: center;
+    font-family: Montserrat, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 12pt;
+    color: rgba(145, 145, 145, 255);
+    text-align: center;
+  }
+
+  .footer-col {
+
+    padding-left: 33px;
+    .footer-link {
+      font-family: Montserrat;
+      font-size: 14pt;
+      font-weight: bold;
+      color: rgba(145, 145, 145, 255);
+      text-align: left;
+      padding-bottom: 20px;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {}
+@media screen and (min-width: 992px) {}
+@media screen and (max-width: 991px) {}
+@media screen and (min-width: 768px) and (max-width: 991px) {}
+@media screen and (max-width: 767px) {}

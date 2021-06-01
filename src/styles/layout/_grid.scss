@@ -1,0 +1,166 @@
+/*grid settings*/
+$mainwrapper: 1230px;
+$column-padding: 33px;
+$colnumber: 25;
+$startcolnumber: 1;
+/*2. Responsive float grid*/
+.overlay .active{
+filter: blur(5px);position:absolute;display:inline-block;min-height: 100%;min-width: 100%;
+}
+.grid-responsive {
+  background: rgb(240,240,240);
+
+  .grid-responsive__container {
+    display: block;
+    margin: auto;
+    width: auto;
+    max-width: $mainwrapper;
+    width: 100%;
+
+  }
+
+  .grid-responsive::after {
+    @include clearfix;
+  }
+
+  .grid-responsive__row {
+    width: 100%;
+    display: inline-block;
+
+    &::before {
+      @include clearfix;
+      clear: both;
+    }
+  }
+
+  .grid-responsive__column {
+    display: block;
+    float: left;
+    min-height: 1px;
+
+    &::before {
+      @include clearfix;
+      clear: both;
+    }
+  }
+  @for $startcolnumber from 1 through $colnumber {
+    .grid-responsive__column__col-#{$startcolnumber} {
+      width: calc(100% * (#{$startcolnumber} / #{$colnumber}));
+    }
+
+  }
+
+  [class*="grid-responsive__column__col-"] {
+    float: left;
+    &::before {
+      @include clearfix;
+      clear: both;
+    }
+  }
+
+  .grid-responsive__column {
+    padding: 0 #{$column-padding};
+    margin-left: #{$column-padding};
+  }
+  /*grid responsive nthchild one doesnot have any margin*/
+
+
+  [class*="grid-responsive__column__col-"]::after {
+    @include clearfix;
+  }
+
+}
+/*
+/* 2. flex grid*/
+.flex {
+  justify-content: space-between;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  display: flex;
+  margin: auto;
+  @include flex-direction(column);
+
+  .row-full {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-self: 1;
+    @include flex-direction(row);
+
+    .full {
+      width: 100%;
+    }
+  }
+
+  [class*="flex-"] {
+    display: flex;
+  }
+}
+
+.flex-row {
+  @include flex-direction(row);
+  justify-content: center;
+  display: flex;
+  max-width: 980px;
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  flex-wrap:wrap;
+
+
+  display: flex;
+}
+
+.flex-column {
+  align-self: stretch;
+  align-self: stretch;
+  display: flex;
+  @include flex-direction(column);
+  align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.flex-column__centered {
+  align-self: center;
+}
+
+p {
+  font-family: Montserrat, AdobeInvisFont, MyriadPro-Regular;
+  font-size: 16px;
+  color: rgba(47, 47, 47, 255);
+  text-align: center;
+}
+/*end flex grid*/
+
+/*main*/
+main{
+    background: rgb(255,255,255);
+  }
+/*end main*/
+
+/*clearfix  for floats*/
+.clearfix{
+  visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+&:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+}
+/*cleafix end*/
+
+
+
+/*sticke footer*/
+/*end scticky footer*/

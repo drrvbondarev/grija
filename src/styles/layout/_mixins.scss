@@ -1,0 +1,43 @@
+//fonts
+//google-fonts as in psd mockup
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+/**/
+
+@mixin mainfont{
+font-family: 'Montserrat', sans-serif;
+}
+
+
+@mixin selected-radius{
+-webkit-box-shadow: 0px 0px 8px 1px rgba(12,47,143,0.69);
+-moz-box-shadow: 0px 0px 8px 1px rgba(12,47,143,0.69);
+box-shadow: 0px 0px 8px 1px rgba(12,47,143,0.69);
+}
+@mixin flex-direction($direction){
+	 flex-direction: $direction;
+	-webkit-flex-direction: $direction;
+	-ms-flex-direction: $direction;
+}
+@mixin border-radius($border-radius){
+	border-radius: $border-radius;
+	-webkit-border-radius: $border-radius;
+	-ms-border-radius: $border-radius;
+	-o-border-radius:$border-radius;
+}
+@mixin order($number){
+-webkit-box-ordinal-group: $number;
+-ms-flex-order: $number;
+order: $number;
+}
+@mixin clearfix {
+  overflow: hidden;
+}
+@mixin translate($x,$y){
+-moz-transform: translate($x, $y);
+-webkit-transform: translate($x, $y);
+-o-transform: translate($x, $y);
+-ms-transform: translate($x, $y);
+transform: translate($x, $y);
+}
+/*mixin bouqlet half of the screen*/
