@@ -4,6 +4,8 @@ module.exports = {
   // Source files
   src: path.resolve(__dirname, '../src'),
 
+    main: path.resolve(__dirname, './src/index.js'),
+
   // Production build files
   build: path.resolve(__dirname, '../dist'),
 
